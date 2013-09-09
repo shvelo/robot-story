@@ -3,24 +3,57 @@
     src: url(Atari.ttf);
 }
 
+@import url(animation.css);
+
+@-webkit-keyframes walk-l {
+    from {
+        background-position: -120px 0;
+    }
+    to {
+        background-position: -360px 0;
+    }
+}
+
+@-webkit-keyframes walk-r {
+    from {
+        background-position: -360px 0;
+    }
+    to {
+        background-position: -600px 0;
+    }
+}
+
 html, body {
     font-family: Atari;
     padding: 0;
     margin: 0;
     height: 100%;
 }
+
 body {
     background: #74c2ff;
 }
+
 .character {
     position: absolute;
     left: 50%;
     bottom: 205px;
     width: 120px;
-    height: 160px;
+    height: 140px;
     margin-left: -60px;
-    background: url(stand.png) no-repeat bottom center;
+    background: url(sprite.png) no-repeat 0 0;
 }
+
+.character.test-l {
+    margin-left: -200px;
+    -webkit-animation: walk-l 1s steps(2) infinite;
+}
+
+.character.test-r {
+    margin-left: 80px;
+    -webkit-animation: walk-r 1s steps(2) infinite;
+}
+
 .ground {
     position: fixed;
     bottom: 0;

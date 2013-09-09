@@ -7,12 +7,36 @@
         walkingLeft: false,
         walkingRight: false,
         position: 0,
-        maxPosition: $("body").width() - $("#intro").width()
+        maxPosition: $("body").width() - $("#intro").width(),
+        half: $("#scenery-intro").width() / 2
     };
+    Game.texts = {
+        texts: [],
+        at: function(pos) {
+            for(i = this.texts.length - 1; i>=0; i--){
+                if(this.texts[i].pos == pos) return this.texts[i];
+            }
+        },
+        inRange: function(range) {
+            pos = Game.position;
+            if(!range) range = 50;
+            for(i = this.texts.length - 1; i>=0; i--){
+                if(this.texts[i].pos >= pos - range && this.texts[i].pos <= pos + range) return this.texts[i];
+            }
+        },
+        add: function(el, pos) {
+            this.texts.push({
+                el: el,
+                pos: pos
+            });
+        }
+    }
     var processFrame = function() {
         if(Game.walkingRight && Game.position < Game.maxPosition) {
             Game.character.attr("class", "character walking-right");
             $("body").scrollLeft(Game.position++);
+            inRange = Game.texts.inRange();
+            if(inRange) inRange.el.addClass("show");
         } else if(Game.walkingLeft && Game.position > 0) {
             Game.character.attr("class", "character walking-left");
             $("body").scrollLeft(Game.position--);
@@ -23,6 +47,10 @@
     }
     Game.mainLoop = setInterval(processFrame,1);
     Game.start = function() {
+        $(".text").each(function(){
+            var t_position = $(this).data('position');
+            Game.texts.add($(this), t_position);
+        });
         Game.started = true;
     }
 })();

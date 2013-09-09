@@ -368,3 +368,16 @@ body {
 #scenery-desk-9 {
     left: 3900px;
 }
+
+.text {
+    opacity: 0;
+    position: absolute;
+    transition: 1s;
+    color: white;
+    z-index: 88;
+    font-size: 2em;
+}
+
+.text.show {
+    opacity: 1;
+}

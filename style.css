@@ -431,6 +431,10 @@ body {
     -webkit-animation: fan 1.5s infinite steps(15);
 }
 
+.scenery-fan.dead .fins {
+    -webkit-animation: none;
+}
+
 .scenery-fan .cover {
     width: 100px;
     height: 100px;

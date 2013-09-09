@@ -484,6 +484,14 @@ body {
     background: url(server_dead.png) no-repeat;
 }
 
+.scenery-server-red {
+    position: absolute;
+    width: 100px;
+    height: 250px;
+    bottom: 205px;
+    background: url(server_red.png) no-repeat;
+}
+
 #scenery-server-1 {
     left: 4650px;
 }

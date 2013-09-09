@@ -3,43 +3,201 @@
     src: url(Atari.ttf);
 }
 
-@-webkit-keyframes walk-l {
-    from {
-        background-position: -120px 0;
-    }
-    to {
-        background-position: -360px 0;
-    }
+@keyframes "walk-l" {
+ from {
+    background-position: -120px 0;
+ }
+ to {
+    background-position: -360px 0;
+ }
+
 }
 
-@-webkit-keyframes walk-r {
-    from {
-        background-position: -360px 0;
-    }
-    to {
-        background-position: -600px 0;
-    }
+@-moz-keyframes walk-l {
+ from {
+   background-position: -120px 0;
+ }
+ to {
+   background-position: -360px 0;
+ }
+
 }
 
-@-webkit-keyframes ground-r {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: -200px 0;
-    }
+@-webkit-keyframes "walk-l" {
+ from {
+   background-position: -120px 0;
+ }
+ to {
+   background-position: -360px 0;
+ }
+
 }
 
-@-webkit-keyframes ground-l {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 200px 0;
-    }
+@-ms-keyframes "walk-l" {
+    from  {
+     background-position: -120px 0;
+}
+ to {
+   background-position: -360px 0;
+ }
+
 }
 
-html, body {
+ @-o-keyframes "walk-l" {
+    from  {
+     background-position: -120px 0;
+}
+ to {
+   background-position: -360px 0;
+ }
+
+@keyframes "walk-r" {
+ from {
+   background-position: -360px 0;
+ }
+ to {
+   background-position: -600px 0;
+ }
+
+}
+
+@-moz-keyframes walk-r {
+ from {
+   background-position: -360px 0;
+ }
+ to {
+   background-position: -600px 0;
+ }
+
+}
+
+@-webkit-keyframes "walk-r" {
+ from {
+   background-position: -360px 0;
+ }
+ to {
+   background-position: -600px 0;
+ }
+
+}
+
+@-ms-keyframes "walk-r" {
+    from  {
+     background-position: -360px 0;
+}
+ to {
+   background-position: -600px 0;
+ }
+
+}
+
+ @-o-keyframes "walk-r" {
+    from  {
+     background-position: -360px 0;
+}
+ to {
+   background-position: -600px 0;
+ }
+
+@keyframes "ground-r" {
+ from {
+   background-position: 0 0;
+ }
+ to {
+   background-position: -200px 0;
+ }
+
+}
+
+@-moz-keyframes ground-r {
+ from {
+   background-position: 0 0;
+ }
+ to {
+   background-position: -200px 0;
+ }
+
+}
+
+@-webkit-keyframes "ground-r" {
+ from {
+   background-position: 0 0;
+ }
+ to {
+   background-position: -200px 0;
+ }
+
+}
+
+@-ms-keyframes "ground-r" {
+    from  {
+     background-position: 0 0;
+}
+ to {
+   background-position: -200px 0;
+ }
+
+}
+
+ @-o-keyframes "ground-r" {
+    from  {
+     background-position: 0 0;
+}
+ to {
+   background-position: -200px 0;
+ }
+
+@keyframes "ground-l" {
+ from {
+   background-position: 0 0;
+ }
+ to {
+   background-position: 200px 0;
+ }
+
+}
+
+@-moz-keyframes ground-l {
+ from {
+   background-position: 0 0;
+ }
+ to {
+   background-position: 200px 0;
+ }
+
+}
+
+@-webkit-keyframes "ground-l" {
+ from {
+   background-position: 0 0;
+ }
+ to {
+   background-position: 200px 0;
+ }
+
+}
+
+@-ms-keyframes "ground-l" {
+    from  {
+     background-position: 0 0;
+}
+ to {
+   background-position: 200px 0;
+ }
+
+}
+
+ @-o-keyframes "ground-l" {
+    from  {
+     background-position: 0 0;
+}
+ to {
+   background-position: 200px 0;
+ }
+
+}
+
+ html,body {
     font-family: Atari;
     padding: 0;
     margin: 0;
@@ -65,20 +223,34 @@ body {
 
 .character.walking-left {
     -webkit-animation: walk-l .5s steps(2) infinite;
+    -moz-animation: walk-l .5s steps(2) infinite;
+    -ms-animation: walk-l .5s steps(2) infinite;
+    animation: walk-l .5s steps(2) infinite;
 }
 
 .character.walking-right {
-     -webkit-animation: walk-r .5s steps(2) infinite;
+    -webkit-animation: walk-r .5s steps(2) infinite;
+    -moz-animation: walk-r .5s steps(2) infinite;
+    -ms-animation: walk-r .5s steps(2) infinite;
+    animation: walk-r .5s steps(2) infinite;
 }
 
 .character.test-l {
     margin-left: -200px;
+
     -webkit-animation: walk-l 1s steps(2) infinite;
+    -moz-animation: walk-l 1s steps(2) infinite;
+    -ms-animation: walk-l 1s steps(2) infinite;
+    animation: walk-l 1s steps(2) infinite;
 }
 
 .character.test-r {
     margin-left: 80px;
+
     -webkit-animation: walk-r 1s steps(2) infinite;
+    -moz-animation: walk-r 1s steps(2) infinite;
+    -ms-animation: walk-r 1s steps(2) infinite;
+    animation: walk-r 1s steps(2) infinite;
 }
 
 .ground {
@@ -88,6 +260,8 @@ body {
     width: 1000%;
     height: 200px;
     background: url(tile.png);
+
+    -webkit-box-shadow: 0 0 5px #222;
     box-shadow: 0 0 5px #222;
     border-top: 5px solid #222;
     z-index: 1;
@@ -95,12 +269,23 @@ body {
 
 .ground.animate-left {
     -webkit-animation: ground-l 1s steps(5) infinite;
+    -moz-animation: ground-l 1s steps(5) infinite;
+    -ms-animation: ground-l 1s steps(5) infinite;
+    animation: ground-l 1s steps(5) infinite;
 }
+
 .ground.animate-right {
     -webkit-animation: ground-r 1s steps(5) infinite;
+    -moz-animation: ground-r 1s steps(5) infinite;
+    -ms-animation: ground-r 1s steps(5) infinite;
+    animation: ground-r 1s steps(5) infinite;
 }
+
 .ground.paused {
     -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    animation-play-state: paused;
 }
 
 .overlay {
@@ -187,7 +372,6 @@ body {
     text-align: center;
     background: #D5D5D5;
     border: 5px solid #FF798E;
-
     display: none;
 }
 
@@ -222,7 +406,7 @@ body {
     width: 160px;
     height: 98px;
     background: url(desk.png) no-repeat;
-    position:absolute;
+    position: absolute;
     z-index: 5;
     bottom: 205px;
 }
@@ -231,7 +415,7 @@ body {
     width: 160px;
     height: 114px;
     background: url(desk_pc.png) no-repeat;
-    position:absolute;
+    position: absolute;
     z-index: 5;
     bottom: 205px;
 }
@@ -240,17 +424,43 @@ body {
     width: 160px;
     height: 114px;
     background: url(desk_fluids.png) no-repeat;
-    position:absolute;
+    position: absolute;
     z-index: 5;
     bottom: 205px;
 }
 
-#scenery-desk-1 { left: 2200px; }
-#scenery-desk-2 { left: 2400px; }
-#scenery-desk-3 { left: 2600px; }
-#scenery-desk-4 { left: 2800px; }
-#scenery-desk-5 { left: 3000px; }
-#scenery-desk-6 { left: 3200px; }
-#scenery-desk-7 { left: 3400px; }
-#scenery-desk-8 { left: 3600px; }
-#scenery-desk-9 { left: 3900px; }
+#scenery-desk-1 {
+    left: 2200px;
+}
+
+#scenery-desk-2 {
+    left: 2400px;
+}
+
+#scenery-desk-3 {
+    left: 2600px;
+}
+
+#scenery-desk-4 {
+    left: 2800px;
+}
+
+#scenery-desk-5 {
+    left: 3000px;
+}
+
+#scenery-desk-6 {
+    left: 3200px;
+}
+
+#scenery-desk-7 {
+    left: 3400px;
+}
+
+#scenery-desk-8 {
+    left: 3600px;
+}
+
+#scenery-desk-9 {
+    left: 3900px;
+}

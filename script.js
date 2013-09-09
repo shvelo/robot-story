@@ -16,10 +16,11 @@
                 if(this.texts[i].pos == pos) return this.texts[i];
             }
         },
-        inRange: function(range) {
+        inRange: function(range, hide_others) {
             pos = Game.position;
             if(!range) range = 50;
             for(i = this.texts.length - 1; i>=0; i--){
+                if(hide_others) this.texts[i].el.removeClass("show")
                 if(this.texts[i].pos >= pos - range && this.texts[i].pos <= pos + range) return this.texts[i];
             }
         },
@@ -35,12 +36,14 @@
             Game.character.attr("class", "character walking-right");
             Game.position += 4;
             $("body").scrollLeft(Game.position);
-            inRange = Game.texts.inRange();
+            inRange = Game.texts.inRange(200, true);
             if(inRange) inRange.el.addClass("show");
         } else if(Game.walkingLeft && Game.position > 3) {
             Game.character.attr("class", "character walking-left");
             Game.position -= 4;
             $("body").scrollLeft(Game.position);
+            inRange = Game.texts.inRange(200, true);
+            if(inRange) inRange.el.addClass("show");
         } else {
             Game.character.attr("class", "character");
             $("body").scrollLeft(Game.position);

@@ -234,7 +234,6 @@ body {
     width: 100%;
     height: 20em;
     text-align: center;
-    z-index: 999;
 }
 
 #scenery-intro h1 {
@@ -246,22 +245,28 @@ body {
 
 #scenery-key-left {
     position: absolute;
-    bottom: 220px;
+    bottom: 230px;
     left: 50%;
-    margin-left: -217px;
-    width: 140px;
-    height: 140px;
-    background: url(key-left.png) no-repeat;
+    margin-left: -178px;
+    width: 100px;
+    height: 100px;
+    background: white url(key-left.png) no-repeat;
+    background-size: 100%;
 }
 
 #scenery-key-right {
     position: absolute;
-    bottom: 220px;
+    bottom: 230px;
     left: 50%;
     margin-left: 80px;
-    width: 140px;
-    height: 140px;
-    background: url(key-right.png) no-repeat;
+    width: 100px;
+    height: 100px;
+    background: white url(key-right.png) no-repeat;
+    background-size: 100%;
+}
+
+#scenery-key-left.pressed, #scenery-key-right.pressed {
+    background-position: 5px 5px;
 }
 
 #scenery-labs {

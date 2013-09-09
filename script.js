@@ -2,6 +2,8 @@
     Game = {
         character: $("#character"),
         ground: $("#ground"),
+        keyLeft: $("#scenery-key-left"),
+        keyRight: $("#scenery-key-right"),
         started: false,
         walkingLeft: false,
         walkingRight: false,
@@ -70,9 +72,11 @@ $(window).keydown(function(e){
         switch(e.keyCode) {
             case KEY_LEFT:
                 Game.walkingLeft = true;
+                Game.keyLeft.attr("class", "pressed");
                 break;
             case KEY_RIGHT:
                 Game.walkingRight = true;
+                Game.keyRight.attr("class", "pressed");
                 break;
         }
     }
@@ -83,9 +87,11 @@ $(window).keyup(function(e){
         switch(e.keyCode) {
             case KEY_LEFT:
                 Game.walkingLeft = false;
+                Game.keyLeft.attr("class", "");
                 break;
             case KEY_RIGHT:
                 Game.walkingRight = false;
+                Game.keyRight.attr("class", "");
                 break;
         }
     }

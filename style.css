@@ -278,6 +278,19 @@ body {
     color: #ff7777;
 }
 
+.scenery-access-machine {
+    height: 100px;
+    width: 56px;
+    background: url(access_machine.png) no-repeat;
+    position: absolute;
+    z-index: 5;
+    bottom: 205px;
+}
+
+#scenery-access-machine-1 {
+    left: 1980px;
+}
+
 .scenery-desk {
     width: 160px;
     height: 98px;

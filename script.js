@@ -24,14 +24,8 @@
     Game.mainLoop = setInterval(processFrame,1);
     Game.start = function() {
         Game.started = true;
-        $("#intro").hide();
-        $(".character.test-l, .character.test-r").hide();
     }
 })();
-
-$("#intro").click(function(){
-    Game.start();
-});
 
 KEY_UP = 38;
 KEY_DOWN = 40;
@@ -63,3 +57,5 @@ $(window).keyup(function(e){
         }
     }
 });
+
+Game.start();

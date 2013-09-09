@@ -142,6 +142,7 @@ body {
 }
 
 .region {
+    background: url(light.png) repeat-x;
     float: left;
     height: 100%;
 }
@@ -151,15 +152,15 @@ body {
 }
 
 .region.gray {
-    background: #A2A2A2;
+    background-color: #A2A2A2;
 }
 
 .region.blue {
-    background: #98b0e7;
+    background-color: #98b0e7;
 }
 
 .region.red {
-    background: #de9191;
+    background-color: #de9191;
 }
 
 #region-1 {
@@ -184,6 +185,30 @@ body {
     top: 100px;
     width: 400px;
     text-align: center;
-    background: white;
-    border: 3px solid gray;
+    background: #D5D5D5;
+    border: 5px solid #FF798E;
+
+    display: none;
+}
+
+#scenery-labs {
+    position: absolute;
+    left: 1500px;
+    top: 150px;
+    width: 400px;
+    text-align: center;
+    background: rgba(0,0,0,.2);
+}
+
+.scenery-desk {
+    width: 160px;
+    height: 98px;
+    background: url(desk.png) no-repeat;
+}
+
+#scenery-desk-1 {
+    position:absolute;
+    z-index: 5;
+    bottom: 205px;
+    left: 2200px;
 }

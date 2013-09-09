@@ -19,7 +19,6 @@
  to {
    background-position: -360px 0;
  }
-
 }
 
 @-webkit-keyframes "walk-l" {
@@ -31,16 +30,6 @@
  }
 }
 
-@-ms-keyframes "walk-l" {
-    from  {
-     background-position: -120px 0;
-}
- to {
-   background-position: -360px 0;
- }
-
-}
-
 @keyframes "walk-r" {
  from {
    background-position: -360px 0;
@@ -48,7 +37,6 @@
  to {
    background-position: -600px 0;
  }
-
 }
 
 @-moz-keyframes walk-r {
@@ -58,7 +46,6 @@
  to {
    background-position: -600px 0;
  }
-
 }
 
 @-webkit-keyframes "walk-r" {
@@ -68,26 +55,16 @@
  to {
    background-position: -600px 0;
  }
-
 }
 
-@-ms-keyframes "walk-r" {
-    from  {
-     background-position: -360px 0;
-}
- to {
-   background-position: -600px 0;
- }
+@-webkit-keyframes "pc" {
+    from {
+        background-position: 0 0;
+    }
 
-}
-
-@keyframes "ground-r" {
- from {
-   background-position: 0 0;
- }
- to {
-   background-position: -200px 0;
- }
+    to {
+        background-position: 0 -229px;
+    }
 }
 
 html,body {
@@ -318,10 +295,11 @@ body {
 .scenery-desk-pc {
     width: 160px;
     height: 114px;
-    background: url(desk_pc.png) no-repeat;
+    background: url(desk_pc.png) no-repeat 0 0;
     position: absolute;
     z-index: 5;
     bottom: 205px;
+    -webkit-animation: pc 1s infinite steps(2);
 }
 
 .scenery-desk-fluids {

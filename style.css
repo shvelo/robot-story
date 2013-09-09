@@ -23,6 +23,24 @@
     }
 }
 
+@-webkit-keyframes ground-r {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -200px 0;
+    }
+}
+
+@-webkit-keyframes ground-l {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 200px 0;
+    }
+}
+
 html, body {
     font-family: Atari;
     padding: 0;
@@ -44,6 +62,14 @@ body {
     background: url(sprite.png) no-repeat 0 0;
 }
 
+.character.walking-left {
+    -webkit-animation: walk-l .5s steps(2) infinite;
+}
+
+.character.walking-right {
+     -webkit-animation: walk-r .5s steps(2) infinite;
+}
+
 .character.test-l {
     margin-left: -200px;
     -webkit-animation: walk-l 1s steps(2) infinite;
@@ -60,9 +86,19 @@ body {
     left: 0;
     width: 100%;
     height: 200px;
-    background: #111;
+    background: url(tile.png);
     box-shadow: 0 0 5px #222;
     border-top: 5px solid #222;
+}
+
+.ground.animate-left {
+    -webkit-animation: ground-l 1s steps(5) infinite;
+}
+.ground.animate-right {
+    -webkit-animation: ground-r 1s steps(5) infinite;
+}
+.ground.paused {
+    -webkit-animation-play-state: paused;
 }
 
 .overlay {
@@ -74,6 +110,7 @@ body {
     margin-top: -10em;
     text-align: center;
     z-index: 999;
+    cursor: pointer;
 }
 
 .overlay h1 {
@@ -85,5 +122,4 @@ body {
 .overlay small {
     font-size: 4em;
     color: white;
-    cursor: pointer;
 }

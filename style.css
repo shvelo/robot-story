@@ -67,6 +67,17 @@
     }
 }
 
+@-webkit-keyframes "fan" {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
 html,body {
     font-family: Atari;
     padding: 0;
@@ -345,6 +356,54 @@ body {
 
 #scenery-desk-9 {
     left: 3900px;
+}
+
+.scenery-fan {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+}
+
+.scenery-fan .fins {
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+    background: url(fan.png) no-repeat;
+    position: absolute;
+    -webkit-animation: fan 1.5s infinite steps(15);
+}
+
+.scenery-fan .cover {
+    width: 100px;
+    height: 100px;
+    background: url(fan_cover.png) no-repeat;
+    position: absolute;
+}
+
+#scenery-fan-1 {
+    left: 4500px;
+    top: 120px;
+}
+#scenery-fan-2 {
+    left: 4800px;
+    top: 120px;
+}
+#scenery-fan-3 {
+    left: 5100px;
+    top: 120px;
+}
+#scenery-fan-4 {
+    left: 5400px;
+    top: 120px;
+}
+#scenery-fan-5 {
+    left: 5700px;
+    top: 120px;
+}
+#scenery-fan-6 {
+    left: 6000px;
+    top: 120px;
 }
 
 .text {

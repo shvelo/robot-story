@@ -361,6 +361,15 @@ body {
     bottom: 205px;
 }
 
+.scenery-desk-broken {
+    width: 160px;
+    height: 98px;
+    background: url(desk_broken.png) no-repeat;
+    position: absolute;
+    z-index: 5;
+    bottom: 205px;
+}
+
 .scenery-desk-pc {
     width: 160px;
     height: 114px;
@@ -371,10 +380,28 @@ body {
     -webkit-animation: pc 1s infinite steps(2);
 }
 
+.scenery-desk-pc-broken {
+    width: 160px;
+    height: 114px;
+    background: url(desk_pc_broken.png) no-repeat 0 0;
+    position: absolute;
+    z-index: 5;
+    bottom: 205px;
+}
+
 .scenery-desk-fluids {
     width: 160px;
     height: 114px;
     background: url(desk_fluids.png) no-repeat;
+    position: absolute;
+    z-index: 5;
+    bottom: 205px;
+}
+
+.scenery-desk-fluids-broken {
+    width: 160px;
+    height: 114px;
+    background: url(desk_fluids_broken.png) no-repeat;
     position: absolute;
     z-index: 5;
     bottom: 205px;

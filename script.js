@@ -18,14 +18,14 @@
             $("body").scrollLeft(Game.position--);
         } else {
             Game.character.attr("class", "character");
+            $("body").scrollLeft(Game.position);
         }
     }
+    Game.mainLoop = setInterval(processFrame,1);
     Game.start = function() {
         Game.started = true;
         $("#intro").hide();
         $(".character.test-l, .character.test-r").hide();
-
-        Game.mainLoop = setInterval(processFrame,1);
     }
 })();
 

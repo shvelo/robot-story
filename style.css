@@ -3,8 +3,6 @@
     src: url(Atari.ttf);
 }
 
-@import url(animation.css);
-
 @-webkit-keyframes walk-l {
     from {
         background-position: -120px 0;
@@ -50,16 +48,19 @@ html, body {
 
 body {
     background: #A2A2A2;
+    width: 9000px;
+    overflow: hidden;
 }
 
 .character {
-    position: absolute;
+    position: fixed;
     left: 50%;
     bottom: 205px;
     width: 120px;
     height: 140px;
     margin-left: -60px;
     background: url(sprite.png) no-repeat 0 0;
+    z-index: 3;
 }
 
 .character.walking-left {
@@ -81,14 +82,15 @@ body {
 }
 
 .ground {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 1000%;
     height: 200px;
     background: url(tile.png);
     box-shadow: 0 0 5px #222;
     border-top: 5px solid #222;
+    z-index: 1;
 }
 
 .ground.animate-left {
@@ -123,4 +125,65 @@ body {
 .overlay small {
     font-size: 4em;
     color: white;
+}
+
+.gate {
+    float: left;
+    height: 100%;
+    background: #1e1e1e url(gate.png) repeat-x bottom center;
+    width: 50px;
+}
+
+.wall {
+    float: left;
+    height: 100%;
+    background: #1e1e1e;
+    width: 50px;
+}
+
+.region {
+    float: left;
+    height: 100%;
+}
+
+.region.white {
+    background: white;
+}
+
+.region.gray {
+    background: #A2A2A2;
+}
+
+.region.blue {
+    background: #98b0e7;
+}
+
+.region.red {
+    background: #de9191;
+}
+
+#region-1 {
+    width: 2000px;
+}
+
+#region-2 {
+    width: 2100px;
+}
+
+#region-3 {
+    width: 2000px;
+}
+
+#region-4 {
+    width: 2650px;
+}
+
+#scenery-no-robots {
+    position: absolute;
+    left: 2200px;
+    top: 100px;
+    width: 400px;
+    text-align: center;
+    background: white;
+    border: 3px solid gray;
 }

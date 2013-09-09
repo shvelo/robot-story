@@ -5,18 +5,19 @@
         ground: $("#ground"),
         started: false,
         walkingLeft: false,
-        walkingRight: false
+        walkingRight: false,
+        position: 0,
+        maxPosition: $("body").width() - $("#intro").width()
     };
     var processFrame = function() {
-        if(Game.walkingRight) {
+        if(Game.walkingRight && Game.position < Game.maxPosition) {
             Game.character.attr("class", "character walking-right");
-            Game.ground.attr("class", "ground animate-right");
-        } else if(Game.walkingLeft) {
+            $("body").scrollLeft(Game.position++);
+        } else if(Game.walkingLeft && Game.position > 0) {
             Game.character.attr("class", "character walking-left");
-            Game.ground.attr("class", "ground animate-left");
+            $("body").scrollLeft(Game.position--);
         } else {
             Game.character.attr("class", "character");
-            Game.ground.addClass("paused");
         }
     }
     Game.start = function() {
@@ -47,7 +48,7 @@ $(window).keydown(function(e){
                 Game.walkingRight = true;
                 break;
         }
-    } else Game.start();
+    }
 });
 
 $(window).keyup(function(e){
@@ -60,5 +61,5 @@ $(window).keyup(function(e){
                 Game.walkingRight = false;
                 break;
         }
-    } else Game.start();
+    }
 });

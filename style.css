@@ -130,7 +130,7 @@ body {
 .gate {
     float: left;
     height: 100%;
-    background: #1e1e1e url(gate.png) repeat-x bottom center;
+    background: black url(gate.png) repeat-x bottom center;
     width: 50px;
 }
 
@@ -200,40 +200,57 @@ body {
     background: rgba(0,0,0,.2);
 }
 
+#scenery-love-science {
+    position: absolute;
+    left: 3000px;
+    top: 120px;
+    width: 500px;
+    text-align: center;
+    color: white;
+}
+
+#scenery-love-science h1 {
+    font-size: 6em;
+    margin: 0;
+}
+
+#scenery-love-science span {
+    color: #ff7777;
+}
+
 .scenery-desk {
     width: 160px;
     height: 98px;
     background: url(desk.png) no-repeat;
+    position:absolute;
+    z-index: 5;
+    bottom: 205px;
 }
 
 .scenery-desk-pc {
     width: 160px;
     height: 114px;
     background: url(desk_pc.png) no-repeat;
+    position:absolute;
+    z-index: 5;
+    bottom: 205px;
 }
 
-#scenery-desk-1 {
+.scenery-desk-fluids {
+    width: 160px;
+    height: 114px;
+    background: url(desk_fluids.png) no-repeat;
     position:absolute;
     z-index: 5;
     bottom: 205px;
-    left: 2200px;
 }
 
-#scenery-desk-2 {
-    position:absolute;
-    z-index: 5;
-    bottom: 205px;
-    left: 2400px;
-}
-#scenery-desk-3 {
-    position:absolute;
-    z-index: 5;
-    bottom: 205px;
-    left: 2600px;
-}
-#scenery-desk-4 {
-    position:absolute;
-    z-index: 5;
-    bottom: 205px;
-    left: 2800px;
-}
+#scenery-desk-1 { left: 2200px; }
+#scenery-desk-2 { left: 2400px; }
+#scenery-desk-3 { left: 2600px; }
+#scenery-desk-4 { left: 2800px; }
+#scenery-desk-5 { left: 3000px; }
+#scenery-desk-6 { left: 3200px; }
+#scenery-desk-7 { left: 3400px; }
+#scenery-desk-8 { left: 3600px; }
+#scenery-desk-9 { left: 3900px; }

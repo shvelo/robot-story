@@ -204,8 +204,12 @@ body {
     height: 100%;
 }
 
-.region.white {
-    background: white url(light_off.png) repeat-x;
+.region.dark {
+    background: #555 url(light_off.png) repeat-x;
+}
+
+.region.darker {
+    background: #222 url(light_off.png) repeat-x;
 }
 
 .region.gray {

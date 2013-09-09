@@ -202,6 +202,17 @@ body {
     background: #de9191 url(light_off.png) repeat-x;
 }
 
+.ground-outside {
+    position: absolute;
+    z-index: 9;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: #5dc600;
+    border-top: 5px solid #78ff00;
+    box-shadow: 0 0 5px #78ff00;
+}
+
 #region-1 {
     width: 2000px;
 }

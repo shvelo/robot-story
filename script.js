@@ -36,7 +36,6 @@
     }
     var theEnd = function() {
         Game.character.attr("class", "character");
-        $(".overlay").show();
         $(".overlay").addClass("show");
         Game.ended = true;
     }

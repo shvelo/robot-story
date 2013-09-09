@@ -243,6 +243,35 @@ body {
     color: white;
 }
 
+.overlay {
+    background: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10000;
+    transition: 2s;
+}
+.overlay.show {
+    opacity: 1;
+}
+
+#outro {
+    text-decoration: none;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    line-height: 2em;
+    margin-top: -1em;
+    text-align: center;
+    font-size: 10em;
+    color: white;
+}
+
 #scenery-key-left {
     position: absolute;
     bottom: 230px;

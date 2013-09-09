@@ -8,6 +8,7 @@
         walkingLeft: false,
         walkingRight: false,
         position: 0,
+        ended: false,
         maxPosition: $("body").width() - $("#intro").width(),
         half: $("#scenery-intro").width() / 2
     };
@@ -33,13 +34,19 @@
             });
         }
     }
+    var theEnd = function() {
+        $(".overlay").addClass("show");
+        Game.ended = true;
+    }
     var processFrame = function() {
+        if(Game.ended) return;
         if(Game.walkingRight && Game.position < Game.maxPosition - 3) {
             Game.character.attr("class", "character walking-right");
             Game.position += 4;
             $("body").scrollLeft(Game.position);
             inRange = Game.texts.inRange(200, true);
             if(inRange) inRange.el.addClass("show");
+            if(Game.position > 8600) theEnd();
         } else if(Game.walkingLeft && Game.position > 3) {
             Game.character.attr("class", "character walking-left");
             Game.position -= 4;

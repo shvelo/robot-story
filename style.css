@@ -472,6 +472,14 @@ body {
     -webkit-animation: server 2s infinite steps(2);
 }
 
+.scenery-server-dead {
+    position: absolute;
+    width: 100px;
+    height: 250px;
+    bottom: 205px;
+    background: url(server_dead.png) no-repeat;
+}
+
 #scenery-server-1 {
     left: 4650px;
 }

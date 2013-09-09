@@ -251,6 +251,7 @@ body {
     width: 100%;
     height: 100%;
     opacity: 0;
+    display: none;
     z-index: 10000;
     transition: 2s;
 }
@@ -274,9 +275,10 @@ body {
 
 #scenery-key-left {
     position: absolute;
-    bottom: 230px;
+    bottom: 50px;
     left: 50%;
-    margin-left: -178px;
+    z-index: 9;
+    margin-left: -238px;
     width: 100px;
     height: 100px;
     background: white url(key-left.png) no-repeat;
@@ -285,9 +287,10 @@ body {
 
 #scenery-key-right {
     position: absolute;
-    bottom: 230px;
+    bottom: 50px;
     left: 50%;
-    margin-left: 80px;
+    z-index: 9;
+    margin-left: 165px;
     width: 100px;
     height: 100px;
     background: white url(key-right.png) no-repeat;
@@ -475,23 +478,23 @@ body {
 }
 #scenery-fan-2 {
     left: 4800px;
-    top: 120px;
+    top: 80px;
 }
 #scenery-fan-3 {
     left: 5100px;
-    top: 120px;
+    top: 80px;
 }
 #scenery-fan-4 {
     left: 5400px;
-    top: 120px;
+    top: 80px;
 }
 #scenery-fan-5 {
     left: 5700px;
-    top: 120px;
+    top: 80px;
 }
 #scenery-fan-6 {
     left: 6000px;
-    top: 120px;
+    top: 80px;
 }
 
 .scenery-server {

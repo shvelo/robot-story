@@ -35,6 +35,8 @@
         }
     }
     var theEnd = function() {
+        Game.character.attr("class", "character");
+        $(".overlay").show();
         $(".overlay").addClass("show");
         Game.ended = true;
     }
@@ -44,14 +46,14 @@
             Game.character.attr("class", "character walking-right");
             Game.position += 4;
             $("body").scrollLeft(Game.position);
-            inRange = Game.texts.inRange(200, true);
+            inRange = Game.texts.inRange(100, true);
             if(inRange) inRange.el.addClass("show");
             if(Game.position > 8600) theEnd();
         } else if(Game.walkingLeft && Game.position > 3) {
             Game.character.attr("class", "character walking-left");
             Game.position -= 4;
             $("body").scrollLeft(Game.position);
-            inRange = Game.texts.inRange(200, true);
+            inRange = Game.texts.inRange(100, true);
             if(inRange) inRange.el.addClass("show");
         } else {
             Game.character.attr("class", "character");

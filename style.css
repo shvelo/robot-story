@@ -206,9 +206,34 @@ body {
     background: url(desk.png) no-repeat;
 }
 
+.scenery-desk-pc {
+    width: 160px;
+    height: 114px;
+    background: url(desk_pc.png) no-repeat;
+}
+
 #scenery-desk-1 {
     position:absolute;
     z-index: 5;
     bottom: 205px;
     left: 2200px;
+}
+
+#scenery-desk-2 {
+    position:absolute;
+    z-index: 5;
+    bottom: 205px;
+    left: 2400px;
+}
+#scenery-desk-3 {
+    position:absolute;
+    z-index: 5;
+    bottom: 205px;
+    left: 2600px;
+}
+#scenery-desk-4 {
+    position:absolute;
+    z-index: 5;
+    bottom: 205px;
+    left: 2800px;
 }

@@ -4,13 +4,12 @@
 }
 
 @keyframes "walk-l" {
- from {
-    background-position: -120px 0;
- }
- to {
-    background-position: -360px 0;
- }
-
+    from {
+        background-position: -120px 0;
+    }
+    to {
+        background-position: -360px 0;
+    }
 }
 
 @-moz-keyframes walk-l {
@@ -30,7 +29,6 @@
  to {
    background-position: -360px 0;
  }
-
 }
 
 @-ms-keyframes "walk-l" {
@@ -42,14 +40,6 @@
  }
 
 }
-
- @-o-keyframes "walk-l" {
-    from  {
-     background-position: -120px 0;
-}
- to {
-   background-position: -360px 0;
- }
 
 @keyframes "walk-r" {
  from {
@@ -91,14 +81,6 @@
 
 }
 
- @-o-keyframes "walk-r" {
-    from  {
-     background-position: -360px 0;
-}
- to {
-   background-position: -600px 0;
- }
-
 @keyframes "ground-r" {
  from {
    background-position: 0 0;
@@ -106,98 +88,9 @@
  to {
    background-position: -200px 0;
  }
-
 }
 
-@-moz-keyframes ground-r {
- from {
-   background-position: 0 0;
- }
- to {
-   background-position: -200px 0;
- }
-
-}
-
-@-webkit-keyframes "ground-r" {
- from {
-   background-position: 0 0;
- }
- to {
-   background-position: -200px 0;
- }
-
-}
-
-@-ms-keyframes "ground-r" {
-    from  {
-     background-position: 0 0;
-}
- to {
-   background-position: -200px 0;
- }
-
-}
-
- @-o-keyframes "ground-r" {
-    from  {
-     background-position: 0 0;
-}
- to {
-   background-position: -200px 0;
- }
-
-@keyframes "ground-l" {
- from {
-   background-position: 0 0;
- }
- to {
-   background-position: 200px 0;
- }
-
-}
-
-@-moz-keyframes ground-l {
- from {
-   background-position: 0 0;
- }
- to {
-   background-position: 200px 0;
- }
-
-}
-
-@-webkit-keyframes "ground-l" {
- from {
-   background-position: 0 0;
- }
- to {
-   background-position: 200px 0;
- }
-
-}
-
-@-ms-keyframes "ground-l" {
-    from  {
-     background-position: 0 0;
-}
- to {
-   background-position: 200px 0;
- }
-
-}
-
- @-o-keyframes "ground-l" {
-    from  {
-     background-position: 0 0;
-}
- to {
-   background-position: 200px 0;
- }
-
-}
-
- html,body {
+html,body {
     font-family: Atari;
     padding: 0;
     margin: 0;
@@ -267,27 +160,6 @@ body {
     z-index: 1;
 }
 
-.ground.animate-left {
-    -webkit-animation: ground-l 1s steps(5) infinite;
-    -moz-animation: ground-l 1s steps(5) infinite;
-    -ms-animation: ground-l 1s steps(5) infinite;
-    animation: ground-l 1s steps(5) infinite;
-}
-
-.ground.animate-right {
-    -webkit-animation: ground-r 1s steps(5) infinite;
-    -moz-animation: ground-r 1s steps(5) infinite;
-    -ms-animation: ground-r 1s steps(5) infinite;
-    animation: ground-r 1s steps(5) infinite;
-}
-
-.ground.paused {
-    -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
-    -ms-animation-play-state: paused;
-    animation-play-state: paused;
-}
-
 .overlay {
     position: fixed;
     top: 50%;
@@ -333,7 +205,7 @@ body {
 }
 
 .region.white {
-    background: white;
+    background: white url(light_off.png) repeat-x;
 }
 
 .region.gray {
@@ -345,7 +217,7 @@ body {
 }
 
 .region.red {
-    background-color: #de9191;
+    background: #de9191 url(light_off.png) repeat-x;
 }
 
 #region-1 {

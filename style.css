@@ -263,7 +263,7 @@ body {
 #outro {
     text-decoration: none;
     display: block;
-    position: fixed;
+    position: relative;
     top: 50%;
     left: 0;
     width: 100%;

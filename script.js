@@ -105,4 +105,28 @@ $(window).keyup(function(e){
     }
 });
 
+Game.keyLeft.mousedown(function(e) {
+    if(Game.started){
+        Game.walkingLeft = true;
+        Game.keyLeft.attr("class", "pressed");
+    }
+});
+
+Game.keyRight.mousedown(function(e) {
+    if(Game.started){
+        Game.walkingRight = true;
+        Game.keyRight.attr("class", "pressed");
+    }
+});
+
+Game.keyLeft.mouseup(function(e) {
+    Game.walkingLeft = false;
+    Game.keyLeft.attr("class", "");
+});
+
+Game.keyRight.mouseup(function(e) {
+    Game.walkingRight = false;
+    Game.keyRight.attr("class", "");
+});
+
 Game.start();

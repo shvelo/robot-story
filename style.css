@@ -235,7 +235,7 @@ body {
     position: absolute;
     top: 100px;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 20em;
     text-align: center;
 }

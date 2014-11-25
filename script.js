@@ -55,7 +55,7 @@
         } else {
             Game.character.attr("class", "character");
         }
-        document.body.scrollLeft = Game.position;
+        $("body").css("left", - Game.position);
         window.requestAnimationFrame(processFrame);
     }
     window.requestAnimationFrame(processFrame);

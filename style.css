@@ -101,7 +101,7 @@ body {
     overflow: hidden;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0;a
     bottom: 0;
 }
 
@@ -283,7 +283,7 @@ body {
     position: fixed;
     bottom: 50px;
     left: 50%;
-    z-index: 9;
+    z-index: 99;
     margin-left: -238px;
     width: 100px;
     height: 100px;
@@ -296,7 +296,7 @@ body {
     position: fixed;
     bottom: 50px;
     left: 50%;
-    z-index: 9;
+    z-index: 99;
     margin-left: 165px;
     width: 100px;
     height: 100px;

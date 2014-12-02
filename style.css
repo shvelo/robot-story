@@ -1,6 +1,6 @@
 @font-face {
     font-family: Atari;
-    src: url(Atari.ttf);
+    src: url(PressStart2P.ttf);
 }
 
 @keyframes "walk-l" {
@@ -90,6 +90,7 @@
 
 html,body {
     font-family: Atari;
+    font-size: 75%;
     padding: 0;
     margin: 0;
     height: 100%;
